@@ -1,0 +1,68 @@
+Run at Mon, 3 Oct 2022 05:33:05 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 5s 153ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 12s 217ms
+
+Run at Tue, 4 Oct 2022 00:15:00 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 6s 185ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 15s 310ms
+
+Run at Tue, 4 Oct 2022 00:19:31 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 5s 801ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 14s 774ms
+
+Run at Tue, 4 Oct 2022 00:20:23 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 6s 154ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 19s 603ms
+
+Run at Tue, 4 Oct 2022 00:23:40 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 5s 780ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 14s 871ms
+
+Run at Tue, 4 Oct 2022 00:28:10 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 5s 399ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 19s 1ms
+
+Run at Tue, 4 Oct 2022 00:30:45 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 5s 891ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 15s 537ms
+
+Run at Tue, 4 Oct 2022 01:36:18 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 5s 557ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 14s 400ms
+
+Run at Tue, 4 Oct 2022 02:24:08 GMT
+com.udacity.webcrawler.SequentialWebCrawler#crawl took 0m 7s 977ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 7s 958ms
+
+Run at Tue, 4 Oct 2022 02:27:40 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 9s 916ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 1m 54s 964ms
+
+Run at Tue, 4 Oct 2022 05:41:00 GMT
+com.udacity.webcrawler.SequentialWebCrawler#crawl took 0m 6s 239ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 6s 217ms
+
+Run at Tue, 4 Oct 2022 05:42:59 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 5s 84ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 11s 785ms
+
+Run at Tue, 4 Oct 2022 14:17:59 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 5s 490ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 14s 66ms
+
+Run at Tue, 4 Oct 2022 14:29:27 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 5s 622ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 14s 158ms
+
+Run at Tue, 4 Oct 2022 20:55:00 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 1s 178ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 1s 835ms
+
+Run at Tue, 4 Oct 2022 20:56:06 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 1s 114ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 2s 112ms
+
+Run at Sat, 29 Oct 2022 01:30:17 GMT
+com.udacity.webcrawler.ParallelWebCrawler#crawl took 0m 5s 981ms
+com.udacity.webcrawler.parser.PageParserImpl#parse took 0m 14s 692ms
+

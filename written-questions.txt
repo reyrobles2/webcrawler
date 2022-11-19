@@ -1,0 +1,71 @@
+Written Questions
+Q1. Run the web crawler using the configurations located at src/main/config/written_question_1a.json and
+    src/main/config/written_question_1b.json. The only difference between these configurations is that one always uses
+    the sequential crawler and the other always uses the parallel crawler. Inspect the profile output in
+    profileData.txt.
+    If you are using a multi-processor computer, you should notice that SequentialWebCrawler#crawl and
+    ParallelWebCrawler#crawl took about the same amount of time, but PageParserImpl#parse took much longer when run with
+    the ParallelWebCrawler.
+    Why did the parser take more time when run with ParallelWebCrawler?
+
+    Answer:
+    The ParallelWebCrawler uses ForkJoinPool, a specialized kind of thread pool called work stealing so that
+    idle worker threads can find work to do. It is more optimized for recursive work but use more resources than
+    traditional thread pools. In the compute() method, we submitted more work to parse in the thread pool by calling the
+    invoke() method and then waits for the results before doing our computation.
+    While the recursive parser work in sequential run use less resources and less complicated.
+
+Q2. Your manager ran your crawler on her old personal computer, using the configurations from Q1, and she notices that
+    the sequential crawler actually outperforms the parallel crawler. She would like to know why.
+    (a) Suggest one reason why the sequential web crawler was able to read more web pages than the parallel crawler.
+        (Hint: Try setting "parallelism" to 1 in the JSON configs to simulate your manager's computer.)
+
+    Answer:
+    Older computers can handle a single thread at a time because of the underlying hardware circuitry that can only
+    handle from a single software thread. The sequential crawler suits better to run on an older computer.
+
+    (b) Suggest one scenario in which the parallel web crawler will almost certainly perform better than the sequential
+        crawler. Why will it perform better?
+
+    Answer:
+     The parallel web crawler will definitely perform better on a multi-core processor computer because it can have more
+     software threads available.
+
+
+Q3. Analyze your method profiler through the lens of Aspect Oriented Programming, by answering the following questions:
+    (a) What cross-cutting concern is being addressed by the com.udacity.webcrawler.profiler.Profiler class?
+    Answer: The run time performance measure of the method being annotated as profiled
+
+    (b) What are the join points of the Profiler in the web crawler program?
+    Answer: The wrap method where the method interceptors are created are called anywhere in the program.
+
+Q4. Identify three (3) different design patterns used in this project, and explain which interfaces, classes, and/or
+    libraries use or implement those design patterns.
+    For each pattern, name one thing about the pattern that you LIKED, and one thing you DISLIKED. If you did not like
+    anything, you can name two things you disliked.
+
+    Answer:
+
+    1. Builder design pattern - used in the CrawlerConfiguration, CrawlResult, ParserModule and PageParserImpl classes.
+    Can improve the API for object creation, especially when the class being instantiated has lots of constructor
+    parameters. The builder represents the configuration for constructing these classes. It's mutable, which means
+    it has setter methods for each of its fields. Creates mutable versions of immutable objects. It supports method
+    chaining that means each setter returns a reference to the builder. I like the builder design because it hides
+    and protects immutable objects from your code and outside world but, then it increases the amount of code in
+    your project.
+
+    2. Decorator pattern - used in the ConfigurationLoader when reading files from disk. It explicitly decorated the
+    file reader with a BufferedReader. The BufferedReader delegates its reads from disk to the file reader. The read
+    method of the BufferedReader then adds its own additional functionality, data buffering on top of that.
+    It improves performance when reading from files as BufferedReader reduces the number of reads from disk. You have
+    to read the JavaDoc and add more code to get the benefits.
+
+    3. Dependency Injection - used in the WebCrawlerMain and Profiler related classes (Implementation, Module and
+    Method Interceptor classes). The Google Guice injection framework is used to inject dependencies.
+    Dependency Injection simply means giving a class its dependencies. It reduces boilerplate code and simplifies
+    and increase in testability. But also increases a lot of classes and objects used in the project that makes it
+    harder to debug because of its abstraction.
+
+
+
+
